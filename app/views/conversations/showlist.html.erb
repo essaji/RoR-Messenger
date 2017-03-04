@@ -1,0 +1,15 @@
+<h2>My Conversations</h2>
+<ul>
+  <% @my_conversations.each do |c| %>
+    <li><%= link_to "conversatio between #{c.sender.email} & #{c.recipient.email}", conversations_new_path(user_id: current_user.id == c.sender.id ? c.recipient.id : c.sender.id), method: :post %></li>
+  <% end %>
+</ul>
+<hr>
+
+
+<div class="col-md-6" >
+  <%= form_tag(conversations_new_path) do %>
+      <%= select_tag :user_id, options_from_collection_for_select(User.all, 'id', 'email'), {class: 'form-control'} %>
+      <%= submit_tag "Start Chat" %>
+  <% end %>
+</div>

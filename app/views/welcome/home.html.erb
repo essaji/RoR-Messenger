@@ -1,5 +1,5 @@
 <h1>Welcome <%= @email %></h1>
 
-<%= button_to 'Chat', chat_path , :class => 'btn btn-warning', method: :get %>
+<%= button_to 'Chat', conversations_path , :class => 'btn btn-warning', method: :get %>
 
 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>

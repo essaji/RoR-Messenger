@@ -1,0 +1,13 @@
+
+<div id="conversation_box" >
+  <% @messages.each do |message| %>
+    <p><%= message.body %></p>
+  <% end %>
+</div>
+
+<div>
+  <%= form_tag(conversations_post_path(:user_id => @user_id, :conversation_id => @conversation.id)) do %>
+      <%= text_field_tag :message_body %>
+      <%= submit_tag "Send Message" %>
+  <% end %>
+</div>

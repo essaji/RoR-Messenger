@@ -1,24 +1,10 @@
-# README
+# RoR Chat Messenger
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Usage
+Follow the commands to get the project running:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```$xslt
+git remote add origin https://github.com/essaji/RoR-Messenger.git
+cd RoR-Messenger
+rails s
+```
